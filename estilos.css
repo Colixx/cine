@@ -1,0 +1,372 @@
+:root{
+    --rojo: #E50914;
+    --fondo: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    padding: 30px 0;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo{
+    font-family: 'Fugaz One', cursive; 
+    font-weight: normal;
+    color: white;
+    font-size: 40px;
+}
+
+header nav a {
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color:#FFF;
+}
+
+/*----------- PELICULA PRINCIPAL -----------*/
+.pelicula-principal{
+    font-size: 16px;
+    min-height: 40.62em;
+    color:white;
+    background: url(imagenes/recomendacion.png);
+    background-position: center center;
+    background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: bottom;
+
+
+}
+
+.pelicula-principal .contenedor {
+    margin-top: 800;
+    margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo{
+    font-weight: 600;
+    font-size: 3.00em;
+    margin-bottom: 0.4em;
+    color: black;
+    font-family: 'Fugaz One', cursive;
+    font-weight: normal;
+    
+}
+
+.pelicula-principal .descripcion{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 30%;
+    margin-bottom: 1.25em;
+    color: black;
+}
+
+.pelicula-principal .boton{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+	transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/*----- contenedor titulo y controles-----*/
+
+.contenedor-titulo-controles h3{
+    color: #000;
+    font-size: 30px;
+    font-family:'Fugaz One', cursive;
+    font-weight: normal;
+    background: url(imagenes/fondoBotones.png);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    height: 35px;
+    border-radius: 10px;
+    
+}
+
+.contenedor-titulo-controles .indicadores button{
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,.contenedor-titulo-controles .indicadores button.activo{
+    background: #a7f7e8;
+}
+
+.contenedor-titulo-controles{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+/* ----contenedor principal y flechas-----*/
+
+.peliculas-recomendadas{
+    margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda, .peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgb(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #FFF;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda{
+    left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha{
+    right: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover, .peliculas-recomendadas .contenedor-principal .flecha-derecha:hover{
+    background: rgb(0, 0, 0, .9);
+}
+
+
+
+
+
+/*--------carousel-----------*/
+.peliculas-recomendadas .contenedor-carousel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover{
+    transform: scale(1.2);
+    transform-origin: center;
+    transform: scale(1.1);
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula{
+    min-width: 17%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .3);
+    margin-left: 20px;
+    border-radius: 10px;
+   
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img{
+    width: 100%;
+    vertical-align: top;
+    
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel  figure .capa {
+    position: absolute;
+    top: 0;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.icono{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+.tituloPelicula{
+    text-decoration: none;
+    text-align: center;
+    font-weight: normal;
+    
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula figure .capa h3{
+    color:#fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*------------- paginas pelicula----------------*/
+
+.peliculaIndividual .tituloPelicula{
+    font-family:'Fugaz One', cursive;
+    color: black;
+    background-image: url(imagenes/fondoBotones.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.peliculaIndividual .secciónPelicula{
+    background-color: black;
+}
+
+.peliculaIndividual .tituloReproducir{
+    font-family:'Fugaz One', cursive;
+    color: #FFF;
+}
+
+    
+.peliculaIndividual .video-responsive {
+    width: 100%;
+	position: relative;
+	padding-bottom: 56.25%; /* proporción 16:9 */
+	padding-top: 25px;
+    height: 0;
+    
+}
+
+.peliculaIndividual .video-responsive iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.peliculaIndividual .imgBack{
+    width: 100%; 
+    border-radius: 10px;
+}
+
+.peliculaIndividual label{
+    color: white;
+}
+
+
+
+.peliculaIndividual form{
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*-----------fooder--------------*/
+
+footer{
+    background: black;
+
+}
+
+footer h3{
+    font-family:'Fugaz One', cursive;
+
+}
+
+footer h3, p{
+    color:white;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------- Media queris---------*/
+@media screen and (max-width: 800px){
+
+    header .logotipo{
+        margin-bottom: 10px;
+    }
+
+    header .contenedor{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pelicula-principal{
+        font-size: 14px;
+    }
+
+    .pelicula-principal .descripcion{
+        max-width: 100%;
+    }
+
+    .peliculas-recomendadas .contenedor-carousel{
+        overflow: visible;
+    }
+
+    .peliculas-recomendadas .contenedor-carousel .carousel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .peliculas-recomendadas .indicadores, .peliculas-recomendadas .flecha-derecha, .peliculas-recomendadas .flecha-izquierda {
+        display: none;
+    }
+
+    
+}
