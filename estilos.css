@@ -264,6 +264,7 @@ header nav a.activo {
 
 .peliculaIndividual .secciónPelicula{
     background-color: black;
+    border-radius: 10px;
 }
 
 .peliculaIndividual .tituloReproducir{
@@ -305,6 +306,41 @@ header nav a.activo {
     padding: 20px;
     border-radius: 10px;
 }
+
+.peliculaIndividual img{
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .3);
+}
+
+audio{
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .3);
+    width:100%;
+    max-width:600px;
+}
+
+
+
+/*------------- pagina ficcion ---------------*/
+.ficcion .titulo{
+    font-family:'Fugaz One', cursive;
+    color: black;
+    background-image: url(imagenes/fondoBotones.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.ficcion .pelicula{
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .3);
+    border-radius: 10px;
+}
+
+.ficcion .pelicula .imagen{
+    border-radius: 10px;
+}
+
+
+
 
 /*-----------fooder--------------*/
 
@@ -368,5 +404,16 @@ footer h3, p{
         display: none;
     }
 
+    .tituloPelicula{
+        text-decoration: none;
+        text-align: center;
+        font-weight: normal;
+        font-size: 10px;        
+    }
+
+    .peliculaIndividual .tituloPelicula{
+        font-size: 25px;
+    }
     
+ 
 }

@@ -1,3 +1,6 @@
+alert("Esta página esa en construcción, las peliculas son inventadas");
+
+
 const fila = document.querySelector(".contenedor-carousel");
 const peliculas = document.querySelectorAll(".pelicula");
 
