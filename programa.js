@@ -1,4 +1,4 @@
-alert("Esta página esa en construcción, las peliculas son inventadas");
+//alert("Esta página esa en construcción, las peliculas son inventadas");
 
 
 const fila = document.querySelector(".contenedor-carousel");

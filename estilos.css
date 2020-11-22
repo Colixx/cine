@@ -11,7 +11,7 @@
 
 body{
     background-color: var(--fondo);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Asap', sans-serif;
 }
 
 .contenedor{
@@ -65,15 +65,22 @@ header nav a.activo {
 .pelicula-principal .contenedor {
     margin-top: 800;
     margin-bottom: 6.25em;
+    background: url(imagenes/fondorecomendacion.png);
+    background-position: center left;
+    background-repeat: no-repeat;
+
 }
 
 .pelicula-principal .titulo{
-    font-weight: 600;
-    font-size: 3.00em;
+    font-weight: 40;
+    font-size: 2.00em;
     margin-bottom: 0.4em;
+    margin-top: 0.4em;
+    margin-left:0.4em;
     color: black;
-    font-family: 'Fugaz One', cursive;
+    font-family:'Fugaz One', cursive;
     font-weight: normal;
+   
     
 }
 
@@ -83,6 +90,7 @@ header nav a.activo {
     line-height: 1.75em;
     max-width: 30%;
     margin-bottom: 1.25em;
+    margin-left:0.8em;
     color: black;
 }
 
@@ -96,6 +104,8 @@ header nav a.activo {
     cursor: pointer;
 	transition: .3s ease all;
     font-size: 1.12em;
+    margin-bottom: 0.8em;
+    margin-left:0.8em;
 }
 
 .pelicula-principal .boton:hover{
@@ -106,15 +116,12 @@ header nav a.activo {
 /*----- contenedor titulo y controles-----*/
 
 .contenedor-titulo-controles h3{
-    color: #000;
+    color: white;
     font-size: 30px;
-    font-family:'Fugaz One', cursive;
-    font-weight: normal;
-    background: url(imagenes/fondoBotones.png);
-    background-repeat: no-repeat;
-    background-size: 200%;
-    height: 35px;
-    border-radius: 10px;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+
+   
     
 }
 
@@ -255,9 +262,8 @@ header nav a.activo {
 /*------------- paginas pelicula----------------*/
 
 .peliculaIndividual .tituloPelicula{
-    font-family:'Fugaz One', cursive;
-    color: black;
-    background-image: url(imagenes/fondoBotones.png);
+    font-weight: bold;
+    color: white;
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -268,7 +274,7 @@ header nav a.activo {
 }
 
 .peliculaIndividual .tituloReproducir{
-    font-family:'Fugaz One', cursive;
+    font-weight: bold;
     color: #FFF;
 }
 
@@ -339,6 +345,45 @@ audio{
     border-radius: 10px;
 }
 
+.ficcion .boton{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 0;
+    cursor: pointer;
+	transition: .3s ease all;
+    font-size: 1.12em;
+    
+}
+
+.ficcion .boton:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/*------------sumate------------------*/
+
+.sumate h1{
+    color: black;
+    font-size: 35px;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+}
+
+.sumate{
+    background: url(imagenes/fondosumate.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .3);
+    
+}
+
+.sumate p{
+    color: black;
+}
 
 
 
@@ -415,5 +460,10 @@ footer h3, p{
         font-size: 25px;
     }
     
- 
+    .pelicula-principal .contenedor {
+        margin-top: 800;
+        margin-bottom: 6.25em;
+        background: url(imagenes/fondorecomendacionR.png);
+        background-repeat: no-repeat ;
+    }
 }
